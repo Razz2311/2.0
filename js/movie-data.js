@@ -1,12 +1,12 @@
 // Database phim + trailer
 const movies = {
     1: {
-        title: "CKTG 2023 JDG vs T1",
+        title: "CKTG 2023: JDG vs T1",
         trailer: "https://www.youtube.com/embed/xxZlV_4KEJk",
-        genres: ["Hành động", "Viễn tưởng"],
-        cast: ["Robert Downey Jr.", "Chris Evans"],
+        genres: ["Hành Động", "Esports"],
+        cast: ["Faker", "Ruler", "Oner", "369"],
         poster: "t/t1vsjdg.png",
-        description: "Phim siêu anh hùng Marvel..."
+        description: "Trận đại chiến đỉnh cao giữa JDG và T1 tại CKTG 2023. Những pha combat mãn nhãn và chiến thuật đỉnh cao."
     },
     2: {
         title: "Jungle Cruise: Thám hiểm rừng xanh ",
