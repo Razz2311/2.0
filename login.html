@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - T1FLIM</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="t/logot1.png" type="image/x-icon">
+</head>
+<body>
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+    
+    <header>
+        <div class="nav container">
+            <a href="index.html" class="logo">
+                T1<span>FLIM</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="login-container">
+        <div class="login-box">
+            <h2>Đăng Nhập</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username"><i class='bx bx-user'></i> Tên đăng nhập</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password"><i class='bx bx-lock-alt'></i> Mật khẩu</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox" name="remember"> Ghi nhớ đăng nhập
+                    </label>
+                    <a href="#" class="forgot-password">Quên mật khẩu?</a>
+                </div>
+                <button type="submit" class="login-btn">Đăng Nhập</button>
+                <div class="register-link">
+                    Chưa có tài khoản? <a href="register.html">Đăng ký ngay</a>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script>
+        // Xử lý loading khi submit form
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.querySelector('.loading').classList.add('active');
+            
+            // Giả lập xử lý đăng nhập
+            setTimeout(function() {
+                document.querySelector('.loading').classList.remove('active');
+                // Chuyển hướng sau khi đăng nhập thành công
+                window.location.href = "loginer.html";
+            }, 1500);
+        });
+    </script>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 T1FLIM. All rights reserved.</p>
+        </div>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách phim</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/movie-data.js"></script>
+    <link rel="shortcut icon" href="t/logot1.png" type="image/x-icon">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<script src="js/search-suggestions.js"></script>
+<body>
+    <!-- Thanh menu giữ nguyên -->
+    <header>
+        <div class="nav container">
+            <a href="index.html" class="logo">
+                T1<span>FLIM</span>
+            </a>
+            <div class="search-box">
+                <input type="search" id="search-input" placeholder="Tìm kiếm phim...">
+                <i class='bx bx-search' id="search-btn"></i>
+                <div id="suggestions-box"></div> <!-- Gợi ý sẽ hiển thị ở đây -->
+            </div>
+            <a href="#" class="user">
+                <img src="t/user.jpg" alt="" class="uesr-img">
+            </a>
+            <div class="navbar">
+                <a href="index.html" id="home-button" class="nav-link nav-active">
+                    <i class='bx bx-home'></i>
+                    <span class="nav-link-title">Trang Chủ</span>
+                </a>
+                
+                <div class="nav-item has-submenu">
+                    <a href="#" class="nav-link">
+                        <i class='bx bx-category'></i>
+                        <span class="nav-link-title">Thể Loại</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="category.html?genre=Hành động">Hành động</a></li>
+                        <li><a href="category.html?genre=Hài hước">Hài hước</a></li>
+                        <li><a href="category.html?genre=Tình cảm">Tình cảm</a></li>
+                        <li><a href="category.html?genre=Kinh dị">Kinh dị</a></li>
+                        <li><a href="category.html?genre=Hoạt hình">Hoạt hình</a></li>
+                        <li><a href="category.html?genre=Phiêu lưu">Phiêu lưu</a></li>
+                        <li><a href="category.html?genre=Tâm lý">Tâm lý</a></li>
+                        <li><a href="category.html?genre=Viễn tưởng">Viễn tưởng</a></li>
+                        <li><a href="category.html?genre=Võ thuật">Võ thuật</a></li>
+                    </ul>
+                </div>
+                
+                <a href="index.html#popular" class="nav-link">
+                    <i class='bx bxs-hot'></i>
+                    <span class="nav-link-title">Xu Hướng</span>
+                </a>
+                
+                <a href="index.html#movies" class="nav-link">
+                    <i class='bx bx-compass'></i>
+                    <span class="nav-link-title">Khám Phá</span>
+                </a>
+                
+                <a href="index.html#new" class="nav-link">
+                  <i class='bx bxs-star'></i>
+                  <span class="nav-link-title">Mới</span>
+              </a>
+            </div>
+            
+        </div>
+    </header>
+
+    <!-- Phần hiển thị danh sách phim theo thể loại -->
+    <section class="movies container">
+        <h2 class="heading-title" id="category-title">Phim thể loại: </h2>
+        <div class="movies-content" id="movies-list"></div>
+    </section>
+   <!-- Nút quay lại đầu trang với biểu tượng mũi tên -->
+   <div class="back-to-top">
+    <a href="#top" class="back-to-top-button">
+        <i class='bx bx-chevrons-up'></i> <!-- Biểu tượng mũi tên hướng lên -->
+    </a>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <div id="footer-marker">
+    <div class="footer" id="footer">
+       <div class="footer-container">
+         <div class="footer-logo">
+           <h3>  T1<span>FLIM</span></h3>
+           <p>T1FLIM - Trang xem phim Online với giao diện mới. <br>
+             Nguồn phim được tổng hợp từ các website lớn với <p>đa dạng các đầu phim và thể loại vô cùng phong phú.</p>
+             <p>Liên hệ: <a href="tel:0123456789">0123 456 789</a></p>
+   
+         </div>
+     
+         
+     
+        
+     
+         <div class="footer-column">
+           <h4>Thông tin</h4>
+           <ul>
+             <li><a href="#">Giới thiệu</a></li>
+             <li><a href="#">Liên hệ chúng tôi</a></li>
+             <li><a href="#">Điều khoản sử dụng</a></li>
+             <li><a href="#">Chính sách riêng tư</a></li>
+             <li><a href="#">Khiếu nại bản quyền</a></li>
+           </ul>
+         </div>
+       </div>
+      <hr style="border-color: #333;">
+   <div class="footer-bottom">
+     <p>© T1FLIM</p>
+     <div class="social-icons">
+       <div class="icon-group">
+         <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+         <div class="dropdown">
+           <a href="https://www.facebook.com/share/1BXuNWe3dU/"target="_blank">Nguyễn Quốc Bảo</a>
+           <a href="https://www.facebook.com/share/16KVZekm6L/"target="_blank">Hồ Chanh Phát</a>
+           <a href="https://www.facebook.com/nguyen.thanh.ong.612693/?locale=vi_VN"target="_blank">Nguyễn Thành Đồng</a>
+           <a href="https://www.facebook.com/profile.php?id=100053463277882&locale=vi_VN"target="_blank">Trương Duy Thành Đạt</a>
+         </div>
+       </div>
+     
+       <div class="icon-group">
+         <a href="#"><i class='bx bxl-telegram'></i></a>
+         <div class="dropdown">
+           <a href="https://www.facebook.com/share/1BXuNWe3dU/"target="_blank">Nguyễn Quốc Bảo</a>
+           <a href="https://www.facebook.com/share/16KVZekm6L/"target="_blank">Hồ Chanh Phát</a>
+           <a href="https://www.facebook.com/nguyen.thanh.ong.612693/?locale=vi_VN"target="_blank">Nguyễn Thành Đồng</a>
+           <a href="https://www.facebook.com/profile.php?id=100053463277882&locale=vi_VN"target="_blank">Trương Duy Thành Đạt</a>
+         </div>
+       </div>
+     
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+       <div class="icon-group">
+         <a href="#"><i class='bx bxl-gmail'></i></a>
+         <div class="dropdown">
+           <a href="https://www.facebook.com/share/1BXuNWe3dU/"target="_blank">Nguyễn Quốc Bảo</a>
+           <a href="https://www.facebook.com/share/16KVZekm6L/"target="_blank">Hồ Chanh Phát</a>
+           <a href="https://www.facebook.com/nguyen.thanh.ong.612693/?locale=vi_VN"target="_blank">Nguyễn Thành Đồng</a>
+           <a href="https://www.facebook.com/profile.php?id=100053463277882&locale=vi_VN"target="_blank">Trương Duy Thành Đạt</a>
+         </div>
+       </div>
+     
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+       
+       <div class="icon-group">
+         <a href="#"><i class='bx bxl-github'></i></a>
+         <div class="dropdown">
+           <a href="https://www.facebook.com/share/1BXuNWe3dU/"target="_blank">Nguyễn Quốc Bảo</a>
+           <a href="https://www.facebook.com/share/16KVZekm6L/"target="_blank">Hồ Chanh Phát</a>
+           <a href="https://github.com/NguyenThanhDong13"target="_blank">Nguyễn Thành Đồng</a>
+           <a href="#"target="_blank"rel="noopener noreferrer">Trương Duy Thành Đạt</a>
+         </div>
+       </div>
+     
+       <div class="icon-group">
+         <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+         <div class="dropdown">
+           <a href="https://www.facebook.com/share/1BXuNWe3dU/"target="_blank"rel="noopener noreferrer">Nguyễn Quốc Bảo</a>
+           <a href="https://www.facebook.com/share/16KVZekm6L/"target="_blank"rel="noopener noreferrer">Hồ Chanh Phát</a>
+           <a href="#"target="_blank"rel="noopener noreferrer">Nguyễn Thành Đồng</a>
+           <a href="#"target="_blank"rel="noopener noreferrer">Trương Duy Thành Đạt</a>
+         </div>
+       </div>
+     </div>
+     
+   </div>
+   
+   
+     <div class="footer-note">
+       © 2025 by. All Rights Reserved. Powered by
+     </div>
+     
+   </div>
+   
+   
+
+<script>
+    const navbar = document.querySelector('.navbar');
+    const marker = document.getElementById('footer-marker');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Khi marker chạm view, dừng navbar
+                navbar.style.position = 'absolute';
+                navbar.style.top = (entry.target.offsetTop - navbar.offsetHeight - 20) + 'px';
+            } else {
+                // Khi chưa chạm footer, giữ fixed giữa màn hình
+                navbar.style.position = 'fixed';
+                navbar.style.top = '50%';
+                navbar.style.transform = 'translateY(-50%)';
+            }
+        });
+    });
+
+    if (marker) {
+        observer.observe(marker);
+    }
+</script>
+   
+     </div>
+    <script src="js/category.js"></script>
+    <SCript src ="js/main.js"></script>
+
+<script src="js/home-button.js"></script>
+</html>

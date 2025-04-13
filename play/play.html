@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Xem phim</title>
+  <link rel="stylesheet" href="../play/play.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="container">
+    <!-- Trailer bên trái -->
+    <div class="left">
+      <div class="trailer-wrapper">
+        <iframe id="trailer" src="" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Thông tin bên phải -->
+    <div class="right">
+      <button id="close-btn">✕</button>
+      <img id="movie-poster" alt="Poster phim" />
+      <div class="info">
+        <h2 id="movie-title">Đang tải phim...</h2>
+        <p id="movie-genre"></p>
+        <p id="movie-description"></p>
+        <p id="movie-cast"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/movie-data.js"></script>
+  <script src="../play/play.js"></script>
+</body>
+</html>
