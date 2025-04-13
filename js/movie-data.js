@@ -3,7 +3,7 @@ const movies = {
     1: {
         title: "CKTG 2023: JDG vs T1",
         trailer: "https://www.youtube.com/embed/xxZlV_4KEJk",
-        genres: ["Hành Động", "Esports"],
+        genres: ["Hành động", "Viễn tưởng"],
         cast: ["Faker", "Ruler", "Oner", "369"],
         poster: "t/t1vsjdg.png",
         description: "Trận đại chiến đỉnh cao giữa JDG và T1 tại CKTG 2023. Những pha combat mãn nhãn và chiến thuật đỉnh cao."
